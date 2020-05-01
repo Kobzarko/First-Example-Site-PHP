@@ -18,7 +18,10 @@
         </div>
         <div class="row">
             <nav class="col-sm-12 col-md-12 col-lg-12">
-                <?php include_once('pages/menu.php'); ?>
+                <?php 
+                include_once('pages/menu.php');
+                include_once('pages/functions.php');
+                ?>
             </nav>
         </div>
         <div class="row">

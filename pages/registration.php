@@ -24,7 +24,7 @@ if (!isset($_POST['regbtn'])) {
     </form>
 <?php
 } else {
-    if (register($_POST['login'], $_POST['pass1'], $_POST['email'])) {
+    if (register($_POST['login'], $_POST['pass1'], $_POST['pass2'], $_POST['email'])) {
         echo " <h3><span style = 'color:green;'>
         New User Added! </span> </h3>";
     }

@@ -3,14 +3,15 @@
 // path to file for passwords and logins
 $users = 'pages/users.txt';
 
-function register($name, $pass, $email)
+function register($name, $pass1, $pass2, $email)
 {
 
     //data validation block
     // trim cut spaces in start and end of string
     // htmlspecialchars - exclude script transmission
     $name = trim(htmlspecialchars($name));
-    $pass = trim(htmlspecialchars($pass));
+    $pass = trim(htmlspecialchars($pass1));
+    $confirmPass = trim(htmlspecialchars($pass2));
     $email = trim(htmlspecialchars($email));
 
     // if validation is failed
@@ -26,7 +27,13 @@ function register($name, $pass, $email)
         return false;
     }
 
-    
+    if ($confirmPass !== $pass) {
+        echo " <h3><span style = 'color:red;'>
+        The passwords must be the same </span> </h3>";
+        return false;
+    } else {
+        return true;
+    }
 
     //login uniqueness check block
     // global - show that is outside variable

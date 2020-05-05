@@ -14,11 +14,16 @@
         <div class="row">
             <header class="col-sm-12 col-md-12 col-lg-12">
 
+                <?php
+                include_once('pages/login.php');
+                var_dump($var);
+                ?>
+
             </header>
         </div>
         <div class="row">
             <nav class="col-sm-12 col-md-12 col-lg-12">
-                <?php 
+                <?php
                 include_once('pages/menu.php');
                 include_once('pages/functions.php');
                 ?>
@@ -34,6 +39,7 @@
                     if ($page == 3) include_once('pages/gallery.php');
                     if ($page == 4) include_once('pages/registration.php');
                 }
+                
                 ?>
             </section>
         </div>

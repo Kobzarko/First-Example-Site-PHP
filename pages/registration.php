@@ -17,14 +17,15 @@ if (!isset($_POST['regbtn'])) {
             <input type="password" name="pass2" class="form-control">
         </div>
         <div class="form-group">
-            <label for="login">Email address:</label>
-            <input type="text" name="email" class="form-control">
+            <label for="email">Email address:</label>
+            <input type="email" name="email" class="form-control">
         </div>
         <button type="submit" class="btn btn-primary" name="regbtn">Register</button>
     </form>
 <?php
 } else {
     if (register($_POST['login'], $_POST['pass1'], $_POST['pass2'], $_POST['email'])) {
+        
         echo " <h3><span style = 'color:green;'>
         New User Added! </span> </h3>";
     }
